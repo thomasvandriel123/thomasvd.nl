@@ -1,0 +1,7 @@
+Lettertypen op deze site
+
+- Fraunces, (c) The Fraunces Project Authors (https://github.com/undercasetype/Fraunces)
+- Instrument Sans, (c) The Instrument Sans Project Authors (https://github.com/Instrument/instrument-sans)
+
+Beide staan onder de SIL Open Font License, versie 1.1: https://openfontlicense.org/open-font-license-official-text/
+De bestanden zijn de latin-subsets zoals Google Fonts ze aanbiedt, hier zelf gehost.

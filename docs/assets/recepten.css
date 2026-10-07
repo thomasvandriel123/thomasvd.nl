@@ -1,0 +1,164 @@
+/* Receptenpagina. Bouwt voort op site.css; alle kleuren komen uit de tokens. */
+
+.layout {
+  display: grid;
+  grid-template-columns: 15.5rem minmax(0, 1fr);
+  gap: var(--space-7);
+  align-items: start;
+}
+
+/* ---------- Inhoudsopgave ---------- */
+.toc {
+  position: sticky;
+  top: var(--space-5);
+  max-height: calc(100vh - var(--space-6));
+  overflow-y: auto;
+  padding-right: var(--space-2);
+}
+.toc > h2 { margin-bottom: var(--space-4); color: var(--ink-muted); }
+.tg { margin-bottom: var(--space-5); }
+.tg h3 {
+  margin: 0 0 var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--line);
+  font: 600 13px/1.4 var(--font-sans);
+  letter-spacing: 0.04em;
+}
+.tg ul { list-style: none; margin: 0; padding: 0; }
+.tg a {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+.tg a:hover { background: var(--surface-sunk); }
+.tg a[aria-current="true"] { background: var(--surface-sunk); color: var(--accent-strong); }
+.tg a .t { display: block; font-weight: 500; font-size: 15px; line-height: 1.3; }
+.tg a .s { display: block; margin-top: 2px; font-size: 13px; line-height: 1.4; color: var(--ink-muted); }
+
+/* ---------- Recept ---------- */
+.recipe {
+  padding-block: var(--space-7) var(--space-8);
+  border-top: 1px solid var(--line);
+  scroll-margin-top: var(--space-5);
+}
+.recipe:first-child { padding-top: 0; border-top: 0; }
+.rh { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-5); justify-content: space-between; align-items: baseline; }
+.rh .label { color: var(--ink-muted); }
+.rt { margin-top: var(--space-2); }
+.intro { margin-top: var(--space-3); max-width: 65ch; }
+.recipe .meta { margin-top: var(--space-3); }
+.sh {
+  margin: var(--space-6) 0 var(--space-3);
+  font: 600 13px/1.4 var(--font-sans);
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+
+/* ---------- Matrix ---------- */
+.mxwrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  -webkit-overflow-scrolling: touch;
+}
+.mx { border-collapse: separate; border-spacing: 0; font-size: 14px; line-height: 1.45; }
+.mx th, .mx td {
+  padding: var(--space-2) var(--space-3);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  font-weight: 400;
+}
+.mx th.ing {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  min-width: 10rem;
+  max-width: 14rem;
+  background: var(--surface);
+  border-right: 2px solid var(--line-strong);
+}
+.mx td.op { background: var(--surface-sunk); min-width: 9.5rem; max-width: 19rem; }
+.mx td.op.root { background: var(--accent); color: var(--on-accent); border-right: 0; }
+.mx td.gap { background: var(--surface); position: relative; padding: 0; min-width: 2.5rem; }
+.mx td.gap::after { content: ""; position: absolute; left: 0; right: 0; top: 1.1rem; border-top: 1px dashed var(--line-strong); }
+.mx .name { display: block; font-weight: 600; }
+.mx .name::first-letter { text-transform: uppercase; }
+.mx .note { display: block; margin-top: 2px; font-size: 13px; line-height: 1.4; color: var(--ink-muted); }
+.mx td.root .note { color: var(--on-accent); }
+.mx b.q { font-weight: 600; font-variant-numeric: tabular-nums; }
+.mx td[data-id], .mx th[data-id] { cursor: pointer; }
+.mx td:focus-visible, .mx th:focus-visible { outline-offset: -3px; }
+
+/* Spoor: geselecteerd = oker, gaat erin = klei, gaat erheen = omlijnd, de rest dimt. */
+.mx.tracing td:not(.t-self):not(.t-in):not(.t-out),
+.mx.tracing th:not(.t-self):not(.t-in):not(.t-out) { color: var(--ink-muted); }
+.mx.tracing td.op:not(.t-self):not(.t-in):not(.t-out) { background: var(--surface); }
+.mx.tracing td.root:not(.t-self):not(.t-in):not(.t-out) { background: var(--surface-sunk); }
+.mx.tracing td.op:not(.t-self):not(.t-in):not(.t-out) .note { color: var(--ink-muted); }
+.mx .t-in { background: var(--clay-tint) !important; color: var(--ink) !important; }
+.mx .t-in .note { color: var(--ink) !important; }
+.mx .t-out { box-shadow: inset 0 0 0 2px var(--ink); }
+.mx .t-self { background: var(--ochre) !important; color: var(--on-ochre) !important; }
+.mx .t-self .note { color: var(--on-ochre) !important; }
+
+/* ---------- Ingrediënten, werkwijze, tips ---------- */
+.cols {
+  display: grid;
+  grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+  gap: 0 var(--space-7);
+  align-items: start;
+}
+.ig h4 {
+  margin: var(--space-5) 0 var(--space-1);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--ink);
+  font: 600 14px/1.4 var(--font-sans);
+}
+.ig h4:first-child { margin-top: 0; }
+.ig ul { list-style: none; margin: 0; padding: 0; }
+.ig li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 16px;
+  line-height: 1.45;
+}
+.ig li .n { min-width: 0; }
+.ig li .a { flex: none; font-size: 15px; color: var(--ink-muted); text-align: right; font-variant-numeric: tabular-nums; }
+.ig b.q { font-weight: 600; }
+
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; max-width: 46rem; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); padding-bottom: var(--space-4); }
+.steps li::before { content: counter(s); font-weight: 600; font-variant-numeric: tabular-nums; color: var(--accent-strong); }
+.steps .k { display: block; font-size: 13px; line-height: 1.4; color: var(--ink-muted); margin-bottom: 2px; }
+.steps b { font-weight: 600; }
+
+.tips { max-width: 46rem; }
+.tips dl { margin: 0; display: grid; gap: var(--space-4); }
+.tips dt { font-weight: 600; }
+.tips dd { margin: 2px 0 0; color: var(--ink-muted); }
+
+noscript .meta { margin-top: var(--space-6); }
+
+@media (max-width: 62rem) {
+  .layout { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+  .toc { position: static; max-height: none; overflow: visible; padding-right: 0; }
+  .toc-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 0 var(--space-6); }
+}
+@media (max-width: 56rem) {
+  .cols { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 40rem) {
+  .mx { font-size: 13px; }
+  .mx th.ing { min-width: 8.25rem; max-width: 9.5rem; padding: var(--space-2); }
+  .mx td { padding: var(--space-2); }
+  .mx td.op { min-width: 8.5rem; }
+}
