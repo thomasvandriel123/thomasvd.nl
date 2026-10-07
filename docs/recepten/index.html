@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recepten · Thomas</title>
+  <meta name="description" content="Mijn recepten als tabel, in de stijl van Cooking for Engineers.">
+  <meta name="theme-color" content="#faf6f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1e1915" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://thomasvd.nl/recepten/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:site_name" content="Thomas">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:url" content="https://thomasvd.nl/recepten/">
+  <meta property="og:title" content="Recepten · Thomas">
+  <meta property="og:description" content="Mijn recepten als tabel, in de stijl van Cooking for Engineers.">
+  <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/recepten.css">
+</head>
+<body>
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+
+  <header class="site-header">
+    <div class="container wide">
+      <a class="wordmark" href="/" aria-label="Thomas, naar de homepage">Thomas</a>
+      <nav class="site-nav" aria-label="Hoofdmenu">
+        <a href="/blog/">Blog</a>
+        <a href="/recepten/" aria-current="page">Recepten</a>
+        <a href="/tools/">Tools</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhoud">
+    <div class="container wide">
+      <div class="page-head">
+        <h1 class="display-lg">Recepten</h1>
+        <p class="lede body-lg">Mijn recepten in de stijl van Cooking for Engineers. Links staan de ingrediënten, de bewerkingen groeien naar rechts en het gerecht staat helemaal rechts. Wijs een cel aan, of tik erop, om te zien wat erin gaat en waar het heen loopt.</p>
+      </div>
+
+      <div class="layout section">
+        <nav class="toc" id="toc" aria-label="Inhoudsopgave"></nav>
+        <div id="recipes"></div>
+      </div>
+
+      <noscript><p class="meta">Voor de receptentabellen is JavaScript nodig. Zet het aan in je browser om de recepten te zien.</p></noscript>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container wide">
+      <p>&copy; 2026 Thomas &middot; thomasvd.nl</p>
+    </div>
+  </footer>
+
+  <script src="/assets/recepten-data.js"></script>
+  <script src="/assets/recepten.js"></script>
+</body>
+</html>
