@@ -200,6 +200,46 @@ var RECIPES=[
   ]
 },
 {
+  id:"pasta-norma", group:0, title:"Pasta alla Norma uit de oven", sub:"2 personen · ± 50 min",
+  intro:"Geroosterde aubergine, een korstje van pecorino in plaats van smeltkaas, en pas aan tafel koele burrata en een knapperige citroen-pangrattato. Alles te koop bij AH, Plus of Dirk.",
+  meta:["2 personen","± 50 min","25 min actief","vegetarisch"],
+  tree:{op:"afmaken",note:"2 min laten staan · burrata erover scheuren, rest pecorino, pangrattato en basilicum erover, draadje olie",of:[
+    {op:"oven 200 °C",note:"12–15 min tot het bubbelt · laatste 2 min grill",of:[
+      {op:"mengen in ovenschaal",note:"pasta + saus + aubergine + scheut kookvocht, bijna te nat · handvol aubergine apart voor erop",of:[
+        {op:"sudderen",note:"15 min zachtjes, op smaak met zout",of:[
+          {op:"fruiten",note:"middelhoog · knoflook en chili 1 min, puree 1 min mee",of:["1 el olijfolie","2 tenen knoflook, in plakjes","½ tl chilivlokken","1 el tomatenpuree"]},
+          "400 g gepelde tomaten, fijngeknepen","½ tl gedroogde oregano","snufje suiker"
+        ]},
+        {op:"roosteren",note:"oven 220 °C, 25–30 min, halverwege keren · ruim uitspreiden",of:["2 aubergines (±600 g), blokjes van 2 cm","3 el olijfolie","½ tl zout"]},
+        {op:"koken",note:"2 min korter dan het pak · 100 ml kookvocht bewaren",of:["200 g rigatoni","ruim water met zout"]}
+      ]},
+      "20 g pecorino romano, geraspt"
+    ]},
+    {op:"goudbruin bakken",note:"middelhoog, 3–4 min · van het vuur: citroenrasp erdoor",of:["1 el olijfolie","30 g panko (of paneermeel)","1 teen knoflook, geraspt","½ tl gedroogde oregano","rasp van ½ citroen"]},
+    "1 burrata (±125 g)","20 g pecorino romano, geraspt","handvol basilicum","scheut olijfolie extra vierge"
+  ]},
+  ingr:[
+    {h:"Aubergine",items:[["Aubergines","2 (±600 g)"],["Olijfolie","3 el"],["Zout","½ tl"]]},
+    {h:"Saus",items:[["Olijfolie","1 el"],["Knoflook","2 tenen"],["Chilivlokken","½ tl"],["Tomatenpuree","1 el"],["Gepelde tomaten","1 blik (400 g)"],["Gedroogde oregano","½ tl"],["Suiker","snufje"]]},
+    {h:"Pasta en kaas",items:[["Rigatoni","200 g"],["Pecorino romano (of Parmezaan)","40 g"],["Burrata","1 (±125 g)"]]},
+    {h:"Pangrattato",items:[["Olijfolie","1 el"],["Panko of paneermeel","30 g"],["Knoflook","1 teen"],["Gedroogde oregano","½ tl"],["Citroen (rasp)","½"]]},
+    {h:"Afwerking",items:[["Basilicum","handvol"],["Olijfolie extra vierge","scheut"]]}
+  ],
+  method:[
+    {h:"Aubergine roosteren.",t:"Verwarm de oven voor op 220 °C. Snijd de aubergines in blokjes van 2 cm, hussel ze met 3 el olijfolie en ½ tl zout en spreid ze ruim uit over een grote bakplaat met bakpapier (of twee). Liggen ze te dicht op elkaar, dan stomen ze in plaats van te kleuren. Rooster 25–30 minuten tot ze diep goudbruin en zacht zijn, halverwege keren."},
+    {h:"Saus.",t:"Verhit 1 el olie in een hapjespan. Fruit knoflook en chilivlokken 1 minuut zachtjes zonder dat ze kleuren, bak de tomatenpuree 1 minuut mee. Voeg de fijngeknepen tomaten, oregano en een snufje suiker toe en laat 15 minuten zachtjes pruttelen. Op smaak met zout."},
+    {h:"Pangrattato.",t:"Bak de panko met 1 el olie, geraspte knoflook, oregano en een snufje zout 3–4 minuten op middelhoog vuur, al roerend, tot hij goudbruin is. Van het vuur de citroenrasp erdoor. Zet apart."},
+    {h:"Pasta koken.",t:"Kook de rigatoni in ruim gezouten water 2 minuten korter dan het pak aangeeft. Schep vlak voor het afgieten ±100 ml kookvocht apart."},
+    {h:"Mengen.",t:"Zet de oven op 200 °C. Schep de pasta door de saus met de geroosterde aubergine (houd een handvol apart) en een scheut kookvocht. Het moet smeuïg zijn, bijna te nat: in de oven trekt het in. Over in een kleine ovenschaal (±20×25 cm)."},
+    {h:"Oven.",t:"Leg de achtergehouden aubergine erop en strooi de helft van de pecorino erover. 12–15 minuten op 200 °C tot het bubbelt, de laatste 2 minuten onder de grill voor bruine randjes."},
+    {h:"Afmaken.",t:"Laat 2 minuten staan. Scheur de burrata erover, strooi de rest van de pecorino, de pangrattato en gescheurde basilicum erover, en maak af met een draadje goede olijfolie."}
+  ],
+  tips:[
+    {h:"Waarom geen mozzarella",t:"Zonder smeltkaas krijg je knapperige, zoute randjes van de pecorino in plaats van een kaasdeken, en blijft de burrata het romige contrast."},
+    {h:"Pecorino",t:"Geen pecorino in de winkel? Parmezaanse kaas werkt ook, iets minder zout en pittig."}
+  ]
+},
+{
   id:"tomatensoep", group:1, title:"Gezonde verse tomatensoep met rode linzen en witte bonen", sub:"4 personen · ± 45 min",
   intro:"Met kefir in plaats van yoghurt als topping.", meta:["4 personen","± 45 min","vegetarisch","≈ 18 g eiwit · 12 g vezels p.p. (schatting)"],
   tree:{op:"serveren",note:"in kommen, volkorenbrood erbij",of:[
